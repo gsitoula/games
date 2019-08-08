@@ -1,0 +1,120 @@
+.board {
+    margin-left: 20px;
+}
+
+.container {
+    /*position: absolute;
+    top: 17px;
+    margin-left: 33px;*/
+}
+
+.container:nth-child(odd) {
+    position: absolute;
+}
+
+.container:nth-child(even) {
+    position: absolute;
+    margin-left: 33px;
+    z-index: 99;
+}
+
+
+
+.square0 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #CD5C5C;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+}
+
+.square1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(101, 205, 92);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square3 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: red;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square4 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: blue;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square5 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 0, 179);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square6 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 115, 0);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square7 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 251, 0);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square8 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(255, 0, 76);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.square9 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: rgb(225, 0, 255);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    display: inline-block;
+    margin-left: 15px;
+}
