@@ -1,18 +1,24 @@
 import React from "react";
 import './GameBoard.css';
 
-const boardLayout = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const boardLayout = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//const boardLayout = [1, 2];
+//const boardLayout = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const letterList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+//const letterList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 class GameBoard extends React.Component {
 
     constructor(props) {
         super(props);
+
+        //this.logPosition = this.logPosition.bind(this);
     }
 
-logPosition (contNum, squareNum) {
+logPosition (contNum, squareNum, e) {
     let position = {contNum: contNum, squareNum: squareNum}
-    console.log(position);
+    console.log(e.target.classList/*.contains("square_unit")*/)
+    //console.log(this);
 }
 
 SetContainerTop (top, i) {
@@ -34,14 +40,23 @@ CreateRow () {
 CreateSquaredRow (contNum) {
     let board_layout = boardLayout.map((v, i) => {
         //return <div className={"square" + i} key={i} onClick={(e) => this.logPosition({contNum}, {i})}><h4>{letterList[i]}</h4></div>
-        return <button className={"square" + i} key={i} onClick={(e) => this.logPosition(contNum, i)}><h4>{letterList[i]}</h4></button>
+        let hasUnitClass = "squarex square" + i;
+        if(contNum === 0 && i === 0) {
+            hasUnitClass = "square_unit squarex square" + i;
+        }
+        return <button className={hasUnitClass} key={i} onClick={(e) => this.logPosition(contNum, i, e)}><h4>{letterList[i]}</h4></button>
     });
     return board_layout;
+}
+
+CreateSquare () {
+    return <button className={"square"} onClick={(e) => this.logPosition(0, 0)}><h4>{"A"}</h4></button>
 }
 
 
 render() {
         return (
+            <div>
             <div className="board">
                 {/* <div className="container0">
                     {this.CreateSquaredRow()}
@@ -55,8 +70,19 @@ render() {
                     <div className="square0"></div>
                     <div className="square1"></div>
                     <div className="square2"></div>
-                </div> */}
+                </div> 
+
+                            <div className="square_container">
+                {
+                    this.CreateSquare()
+                }
+            </div>
+                
+                
+                */}
                 {this.CreateRow()}
+            </div>
+
             </div>
         )
     }
